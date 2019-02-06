@@ -21,6 +21,9 @@ var server = app.listen(7878, function(){
 io = socketio(server);
 io.on('connection', (socket) => {
     console.log(socket.id);
+    socket.on('chat', function(data){
+        io.sockets.emit('chat', data)
+    });
 });
 
 app.get('/', function(req, res){
