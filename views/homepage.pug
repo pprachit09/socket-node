@@ -1,7 +1,13 @@
 html
     head
         title Chat app
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.0/socket.io.js")
+        link(rel="stylesheet", href="css/style.css")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js")
     body
-        h5 Yoooo
+        div(id="mario-chat")
+            div(id="chat-window")
+                div(id="output")
+                    input(type="text", id="handle", placeholder='Who')
+                    input(type="text", id="message", placeholder='message')
+                    button(id="send") Send
         script(src="public/js/chat.js")
