@@ -24,6 +24,12 @@ io.on('connection', (socket) => {
     socket.on('chat', function(data){
         io.sockets.emit('chat', data)
     });
+
+    //for typing activity
+    socket.on('typing',function(data){
+        socket.broadcast.emit('typing', data)
+    });
+
 });
 
 app.get('/', function(req, res){
