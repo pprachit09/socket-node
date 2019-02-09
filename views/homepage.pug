@@ -7,7 +7,8 @@ html
         div(id="mario-chat")
             div(id="chat-window")
                 div(id="output")
-                    input(type="text", id="handle", placeholder='Who')
-                    input(type="text", id="message", placeholder='message')
-                    button(id="send") Send
+                div(id="typing")
+                input(type="text", id="handle", placeholder='Who')
+                input(type="text", id="message", placeholder='message')
+                button(id="send") Send
         script(src="public/js/chat.js")
